@@ -1,0 +1,28 @@
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+li {
+    height: 100%;
+    margin: 10px;
+    position: relative;
+}
+
+li::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #A8FE39 0%, #EDFF08 50%);
+    transition-property: left right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+li:hover::after {
+    width: calc(100% + 5px);
+}
